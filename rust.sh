@@ -1,1 +1,4 @@
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+RUSTFLAGS="-C target-feature=-crt-static"
+git clone https://github.com/helix-editor/helix
+cd helix
+cargo install --path helix-term --locked
